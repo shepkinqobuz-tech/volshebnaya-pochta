@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Волшебная почта — именные мультики-поздравления для детей</title>
+<meta name="description" content="Именные мультфильмы-поздравления для детей: Новый год и день рождения. Скоро открытие!">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✉️</text></svg>">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #fff;
+    background: radial-gradient(ellipse at top, #2b3a8c 0%, #141b4d 55%, #0a0e2e 100%);
+    display: flex; align-items: center; justify-content: center;
+    min-height: 100vh; overflow: hidden; text-align: center; padding: 24px;
+  }
+  .stars, .stars::after {
+    position: fixed; inset: 0; pointer-events: none;
+    background-image:
+      radial-gradient(2px 2px at 10% 20%, #fff, transparent),
+      radial-gradient(1.5px 1.5px at 30% 70%, #fff, transparent),
+      radial-gradient(2px 2px at 55% 15%, #ffe9a8, transparent),
+      radial-gradient(1px 1px at 70% 50%, #fff, transparent),
+      radial-gradient(2px 2px at 85% 80%, #fff, transparent),
+      radial-gradient(1.5px 1.5px at 92% 25%, #ffe9a8, transparent),
+      radial-gradient(1px 1px at 20% 90%, #fff, transparent),
+      radial-gradient(1.5px 1.5px at 45% 45%, #fff, transparent);
+    animation: twinkle 4s ease-in-out infinite alternate;
+  }
+  .stars::after { content: ""; transform: translate(7%, 11%); animation-delay: 2s; }
+  @keyframes twinkle { from { opacity: .35; } to { opacity: 1; } }
+  .snow { position: fixed; top: -20px; color: #fff; opacity: .8; pointer-events: none;
+    animation: fall linear infinite; }
+  @keyframes fall { to { transform: translateY(110vh) rotate(360deg); } }
+  main { position: relative; z-index: 1; max-width: 560px; }
+  .envelope { font-size: 84px; display: inline-block; animation: float 3s ease-in-out infinite; }
+  @keyframes float { 50% { transform: translateY(-12px) rotate(-4deg); } }
+  h1 { font-size: clamp(34px, 7vw, 54px); margin: 16px 0 12px; letter-spacing: .5px;
+    background: linear-gradient(90deg, #ffe9a8, #fff, #ffc6e0);
+    -webkit-background-clip: text; background-clip: text; color: transparent; }
+  p.lead { font-size: clamp(17px, 3.6vw, 21px); line-height: 1.5; opacity: .92; }
+  .badge { display: inline-block; margin-top: 28px; padding: 12px 26px; border-radius: 999px;
+    background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.3);
+    font-size: 18px; font-weight: 600; }
+  .note { margin-top: 18px; font-size: 15px; opacity: .7; }
+</style>
+</head>
+<body>
+  <div class="stars"></div>
+  <main>
+    <div class="envelope">✉️</div>
+    <h1>Волшебная почта</h1>
+    <p class="lead">Именные мультики-поздравления для детей.<br>
+      Ребёнка поздравят по имени сказочные герои — на Новый год и в день рождения.</p>
+    <div class="badge">✨ Скоро открытие ✨</div>
+    <p class="note">Волшебники уже готовят первые письма</p>
+  </main>
+  <script>
+    for (let i = 0; i < 30; i++) {
+      const s = document.createElement('div');
+      s.className = 'snow';
+      s.textContent = '❄';
+      s.style.left = Math.random() * 100 + 'vw';
+      s.style.fontSize = (8 + Math.random() * 14) + 'px';
+      s.style.animationDuration = (6 + Math.random() * 8) + 's';
+      s.style.animationDelay = (-Math.random() * 14) + 's';
+      document.body.appendChild(s);
+    }
+  </script>
+</body>
+</html>
