@@ -45,6 +45,11 @@
     background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.3);
     font-size: 18px; font-weight: 600; }
   .note { margin-top: 18px; font-size: 15px; opacity: .7; }
+  .tg { display: inline-flex; align-items: center; gap: 10px; margin-top: 30px;
+    padding: 15px 30px; border-radius: 999px; background: #2aabee; color: #fff;
+    font-size: 18px; font-weight: 700; text-decoration: none;
+    box-shadow: 0 6px 24px rgba(42,171,238,.45); transition: transform .15s; }
+  .tg:hover { transform: translateY(-2px); }
 </style>
 </head>
 <body>
@@ -56,6 +61,10 @@
       Ребёнка поздравят по имени сказочные герои — на Новый год и в день рождения.</p>
     <div class="badge">✨ Скоро открытие ✨</div>
     <p class="note">Волшебники уже готовят первые письма</p>
+    <a class="tg" href="https://t.me/volshebnaya_pochta" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M9.04 15.6 8.9 19.5c.4 0 .58-.17.8-.38l1.9-1.82 3.95 2.9c.72.4 1.24.19 1.43-.67l2.6-12.2c.26-1.1-.4-1.53-1.1-1.27L3.2 11.9c-1.08.42-1.06 1.02-.19 1.29l3.92 1.22 9.1-5.74c.43-.28.82-.13.5.16z"/></svg>
+      Подписаться в Telegram
+    </a>
   </main>
   <script>
     for (let i = 0; i < 30; i++) {
